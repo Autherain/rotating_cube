@@ -11,7 +11,7 @@ import (
 
 const (
 	delay      = 20 * time.Millisecond
-	coreString = ".,-~:;=!*#$@"
+	coreString = ".,-~:;=!*#$@&§"
 )
 
 func floatMemset(arr []float64, v float64) {
@@ -31,7 +31,6 @@ func getTerminalDimensions() (int, int, error) {
 }
 
 func main() {
-
 	A := 0.0
 	B := 0.0
 
@@ -93,15 +92,13 @@ func main() {
 			fmt.Print(v)
 
 			// Generate a random float between -0.003 and -0.001
-			randomFloat := rand.Float64() * (0.00003 - 0.00001)
+			randomFloat := rand.Float64() * (0.00002 - 0.00001)
 
 			if rand.Intn(2) == 0 {
-
 				A += randomFloat
 			}
 
 			if rand.Intn(2) == 0 {
-
 				B += randomFloat
 			}
 		}
